@@ -1,7 +1,7 @@
 //VAR
 var global = "aceita todas as alterações e funciona fora do escopo";
 console.log("var: " + global);
-console.log("")
+console.log("");
 
 var nome = "mychael";
 console.log(nome);
@@ -12,12 +12,12 @@ if(true) {
 };
 
 console.log(nome);
-console.log("")
+console.log("");
 
 //LET
 let varLet = "aceita todas as alterações e não funciona fora do escopo";
 console.log("let: " + varLet);
-console.log("")
+console.log("");
 
 let numero = 1;
 console.log(numero);
@@ -28,12 +28,12 @@ if(true) {
 };
 
 console.log(numero);
-console.log("")
+console.log("");
 
 //CONST
 const constante = "não aceita alteração e não funciona fora do escopo (so em propriedades de obj e arrays)";
 console.log("const: " + constante);
-console.log("")
+console.log("");
 
 const num = {
     valor: 10,
@@ -44,4 +44,4 @@ console.log(num);
 num.valor = 15;
 num.name = "quinze";
 console.log(num);
-console.log("")
+console.log("");
