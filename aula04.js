@@ -19,9 +19,9 @@ console.log("rest=", num1%num2);
 num1++;
 console.log("incremento=", num1);
 num2--;
-console.log("incremento=", num2);
+console.log("decremento=", num2);
 
 num1+=1;
 console.log("incremento=", num1);
 num2-=1;
-console.log("incremento=", num2);
+console.log("decremento=", num2);
