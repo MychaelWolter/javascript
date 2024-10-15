@@ -1,23 +1,9 @@
-let n = 11;
-let res = n%2;
-if(res == 0){
-    console.log("par");
-}else{
-    console.log("impar");
-}
+let v1 = 10;
+let v2 = "10";
+let v3 = v1 === v2;
+let v4 = {nome: "Mychael"};
 
-/* 
-0 = false, 1 = true 
-(operação - verdadeira - falsa ))
-*/
-res = (!(n%2) ? "par" : "impar");
-console.log(res);
-
-let n1 = 10;
-let n2 = 5;
-let resp = (n1 > n2 ? "verdadeiro" : "falso");
-console.log(resp);
-
-let sts = "A";
-let resposta = (sts == "A" ? "Ativo" : "Inativo");
-console.log(resposta);
+console.log(typeof(v1) + " " + v1);
+console.log(typeof(v2) + " " + v2);
+console.log(typeof(v3) + " " + v3);
+console.log(typeof(v4) + " " + v4);
