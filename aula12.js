@@ -4,7 +4,7 @@ let n3 = [...n1,...n2];
 
 console.log("n1: " + n1);
 console.log("n2: " + n2);
-console.log("n3: " + n3);~
+console.log("n3: " + n3);
 console.log("tipo da n3: " + typeof(n3));
 
 const jogador1 = {nome:"mychael", energia:100, vida:3, magia:150};
