@@ -17,3 +17,5 @@ switch(colocacao){
         console.log("nem pra podio tu presta");
         break;
 }
+
+console.log("posicao: " + colocacao);
