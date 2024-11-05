@@ -1,7 +1,7 @@
-function soma(...valores){
+function soma(...rest){
     let total = 0
-    for(let i=0; i<valores.length; i++){
-        total+=valores[i];
+    for(let i=0; i<rest.length; i++){
+        total+=rest[i];
     }
     return total;
 };
