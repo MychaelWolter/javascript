@@ -1,5 +1,6 @@
 console.log("colocar o * na function")
 function* cores(){
+    yield 'vermelho';
     yield 'verde';
     yield 'azul';
 };
