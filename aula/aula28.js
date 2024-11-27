@@ -6,10 +6,10 @@ let c = cursos.map((elemento,indice)=>{
 
 console.log(c);
 
-const el = document.getElementsByTagName("div");
+let el = document.getElementsByTagName("div");
 el = [...el];
 el.map((e,i)=>{
-    e.innerHTML = i + " - curso: " + e[i] + "" + e;
+    e.innerHTML = i + " - curso: " + e;
     console.log(e);
 });
 
