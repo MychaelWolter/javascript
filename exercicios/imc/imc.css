@@ -9,6 +9,7 @@
 
 body {
     height: 100vh;
+    width: 100vw;
     background-image: radial-gradient(circle at center, #000046 0%, #1B1464 100%), radial-gradient(circle at 20% 20%, #432887 0%, transparent 100%);
 }
 
@@ -21,7 +22,7 @@ main {
     backdrop-filter: blur(15px);
     color: #ffffff;
     width: 20em;
-    height: 22em;
+    height: 26em;
     padding: 2em;
     border-radius: 20px;
 }
@@ -29,7 +30,11 @@ main {
 main div {
     display: flex;
     justify-content: center;
-    margin: 10px;
+    margin: 15px;
+}
+
+div#titulo {
+    font-weight: bold;
 }
 
 div.input {
@@ -46,6 +51,7 @@ div.input input#nome {
 
 div.input input#altura, div.input input#peso {
     width: 5em;
+    margin-right: 0.5em;
 }
 
 button {
@@ -55,4 +61,21 @@ button {
     margin: 20px auto;
     border-radius: 15px;
     border: 1px solid transparent;
+    font-weight: bold;
+    color: #000046;
+}
+
+button:hover {
+    border: 1px solid #432887;
+    color: #432887;
+    cursor: pointer;
+}
+
+div#resultado {
+    width: 14em;
+    height: 8em;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000046;
+    border-radius: 10px;
 }
