@@ -8,7 +8,7 @@ const sons = {
     "J": "snare.wav",
     "K": "tink.wav",
     "L": "tom.wav"
-}
+};
 
 const criarDiv = (texto) => {
     const div = document.createElement("div");
