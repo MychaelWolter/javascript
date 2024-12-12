@@ -40,7 +40,6 @@ const removerEfeito = (letra) => {
 };
 
 const ativarDiv = (evento) => {
-    console.log(evento);
     const letra = evento.type == "click" ? evento.target.id : evento.key.toUpperCase();
 
     const letraPermitida = sons.hasOwnProperty(letra);
