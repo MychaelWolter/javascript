@@ -1,0 +1,30 @@
+.dev {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    border: 4px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.dev:hover {
+    border-color: blueviolet;
+}
+
+.frontEnd {
+    background-color: lightcyan;
+    color: blue;
+}
+
+.backEnd {
+    background-color: greenyellow;
+    color: green;
+}
+
+.destaque {
+    background-color: rosybrown !important;
+    color: brown !important;
+    border-color: firebrick !important;
+}
