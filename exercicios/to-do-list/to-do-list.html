@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
     
-    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/import.css">
 </head>
 <body>
     <main id="to-do-list-container">
@@ -19,7 +19,7 @@
             <label for="create-input">Adicione sua tarefa:</label>
 
             <div id="create-container">
-                <input type="text" id="create-input" placeholder="O que você vai fazer?">
+                <input type="text" id="create-input" placeholder="O que você vai fazer?" maxlength="20">
 
                 <button type="submit">
                     <i class="fa-solid fa-plus"></i>
@@ -31,7 +31,7 @@
             <label for="edit-input">Edite sua tarefa:</label>
 
             <div id="edit-container">
-                <input type="text" id="edit-input">
+                <input type="text" id="edit-input" placeholder="O que você irá mudar?" maxlength="20">
 
                 <button type="submit">
                     <i class="fa-solid fa-circle-check"></i>
@@ -48,7 +48,7 @@
                 <label for="search-input">Pesquisar:</label>
 
                 <div id="search-conatiner">
-                    <input type="text" id="search-input">
+                    <input type="text" id="search-input" placeholder="O que você está atrás?">
 
                     <button id="delete-btn">
                         <i class="fa-solid fa-delete-left"></i>
@@ -68,6 +68,54 @@
         </div>
 
         <div id="to-do-list">
+            <div class="item-to-do-list">
+                <p>Estudar</p>
+
+                <button class="finish-to-do-list">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+
+                <button class="edit-to-do-list">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+
+                <button class="remove-to-do-list">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="item-to-do-list">
+                <p>Estudar</p>
+
+                <button class="finish-to-do-list">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+
+                <button class="edit-to-do-list">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+
+                <button class="remove-to-do-list">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="item-to-do-list">
+                <p>Estudar programação web fullstack</p>
+
+                <button class="finish-to-do-list">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+
+                <button class="edit-to-do-list">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+
+                <button class="remove-to-do-list">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
             <div class="item-to-do-list">
                 <p>Estudar</p>
 

@@ -19,7 +19,7 @@ body {
 }
 
 #to-do-list-container {
-    width: 300px;
+    width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -55,10 +55,33 @@ i {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-#create-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .1rem;
+input-internal-autofill-selected {
+    appearance: menulist-button;
+    background-image: none !important;
+    background-color: rgb(240, 255, 255) !important;
+    color: rgb(107, 107, 107) !important;
+}
+
+@media screen and (max-width: 700px) {
+    #to-do-list-container {
+        width: 300px;
+    }
+
+    .item-to-do-list p {
+        width: 100%;
+    }
+
+    .item-to-do-list button {
+        padding: .2rem .6rem;
+        margin: auto;
+    }
+    
+    .item-to-do-list i {
+        font-size: .6rem;
+        transition: transform .2s;
+    }
+    
+    .item-to-do-list i:hover {
+        transform: translateY(-1.5px);
+    }
 }
