@@ -34,6 +34,7 @@ button {
     background-color: rgb(70, 99, 183);
     color: rgb(255, 255, 255);
     padding: .5rem 1rem;
+    font-size: .8rem;
     border-radius: 15px;
     border: none;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
@@ -44,10 +45,6 @@ button {
 button:hover {
     background-color: rgb(52, 116, 195);
     transform: scale(1.1);
-}
-
-i {
-    font-size: .8rem;
 }
 
 #header h1 {
@@ -74,14 +71,6 @@ input-internal-autofill-selected {
     .item-to-do-list button {
         padding: .2rem .6rem;
         margin: auto;
-    }
-    
-    .item-to-do-list i {
         font-size: .6rem;
-        transition: transform .2s;
-    }
-    
-    .item-to-do-list i:hover {
-        transform: translateY(-1.5px);
     }
 }
