@@ -33,13 +33,18 @@ body {
 button {
     background-color: rgb(70, 99, 183);
     color: rgb(255, 255, 255);
-    padding: .5rem 1rem;
+    padding: .4rem .8rem;
+    margin: auto 0;
     font-size: .8rem;
     border-radius: 15px;
     border: none;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     transition: transform .2s;
+}
+
+button i {
+    pointer-events: none;
 }
 
 button:hover {
@@ -59,6 +64,10 @@ input-internal-autofill-selected {
     color: rgb(107, 107, 107) !important;
 }
 
+.hidden {
+    display: none !important;
+}
+
 @media screen and (max-width: 700px) {
     #to-do-list-container {
         width: 300px;
@@ -68,9 +77,9 @@ input-internal-autofill-selected {
         width: 100%;
     }
 
-    .item-to-do-list button {
-        padding: .2rem .6rem;
-        margin: auto;
+    button {
+        padding: .3rem .6rem;
+        margin: auto 0;
         font-size: .6rem;
     }
 }
