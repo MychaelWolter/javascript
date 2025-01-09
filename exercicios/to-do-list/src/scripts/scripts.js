@@ -77,3 +77,9 @@ document.addEventListener("click", (event) => {
         parentElement.remove();
     };
 });
+
+cancelButton.addEventListener("click", (event) => {
+    createForm.classList.toggle("hidden");
+    editForm.classList.toggle("hidden");
+    toDoList.classList.toggle("hidden");
+});
