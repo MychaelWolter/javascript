@@ -73,13 +73,13 @@ input-internal-autofill-selected {
         width: 300px;
     }
 
-    .item-to-do-list p {
-        width: 100%;
-    }
-
     button {
         padding: .3rem .6rem;
         margin: auto 0;
         font-size: .6rem;
+    }
+
+    .item-to-do-list p {
+        width: 50% !important;
     }
 }

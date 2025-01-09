@@ -34,9 +34,9 @@ const saveToDoList = (textCreateInput) => {
     itemToDoList.appendChild(removeButton);
 
     toDoList.appendChild(itemToDoList);
-    console.log(itemToDoList);
-    console.log(toDoList);
-    
+
+    createInput.value = "";
+    createInput.focus();
 };
 
 
@@ -45,7 +45,7 @@ createForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const createInputValue = createInput.value;
     
-    createInputValue ? saveToDoList(createInputValue) : console.log("Escreva alguma tarefa");
+    createInputValue ? saveToDoList(createInputValue) : alert("Escreva alguma tarefa");
 });
 
 editForm.addEventListener("submit", (event) => {
@@ -53,4 +53,22 @@ editForm.addEventListener("submit", (event) => {
     const editInputValue = editInput.value;
     
 
+});
+
+document.addEventListener("click", (event) => {
+    const targetElement = event.target;
+    const parentElement = targetElement.closest("div");
+    
+    if(targetElement.classList.contains("finish-to-do-list")) {
+        parentElement.classList.toggle("item-to-do-list-finish");
+    };
+
+    if(targetElement.classList.contains("edit-to-do-list")) {
+        createForm.classList.toggle("hidden");
+        editForm.classList.toggle("hidden");
+    };
+
+    if(targetElement.classList.contains("remove-to-do-list")) {
+        parentElement.remove();
+    };
 });
