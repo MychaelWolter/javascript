@@ -39,36 +39,41 @@ const saveToDoList = (textCreateInput) => {
     createInput.focus();
 };
 
+const toggleForms = () => {
+    createForm.classList.toggle("hidden");
+    editForm.classList.toggle("hidden");
+    toDoList.classList.toggle("hidden");
+};
+
 
 // eventos
 createForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const createInputValue = createInput.value;
-    
+
     createInputValue ? saveToDoList(createInputValue) : alert("Escreva alguma tarefa");
 });
 
 editForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const editInputValue = editInput.value;
-    
+
 
 });
 
 document.addEventListener("click", (event) => {
     const targetElement = event.target;
     const parentElement = targetElement.closest("div");
-    
-    if(targetElement.classList.contains("finish-to-do-list")) {
+
+    if (targetElement.classList.contains("finish-to-do-list")) {
         parentElement.classList.toggle("item-to-do-list-finish");
     };
 
-    if(targetElement.classList.contains("edit-to-do-list")) {
-        createForm.classList.toggle("hidden");
-        editForm.classList.toggle("hidden");
+    if (targetElement.classList.contains("edit-to-do-list")) {
+        toggleForms();
     };
 
-    if(targetElement.classList.contains("remove-to-do-list")) {
+    if (targetElement.classList.contains("remove-to-do-list")) {
         parentElement.remove();
     };
 });
