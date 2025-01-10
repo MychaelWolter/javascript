@@ -7,6 +7,8 @@ const cancelButton = document.querySelector("#cancel-btn");
 
 const toDoList = document.querySelector("#to-do-list");
 
+let oldTextToDoList;
+
 // funções 
 
 const saveToDoList = (textCreateInput) => {
@@ -45,25 +47,35 @@ const toggleForms = () => {
     toDoList.classList.toggle("hidden");
 };
 
+const updateToDoList = (newTextEditInput) => {
+    const allToDoList = toDoList.querySelectorAll(".itemToDoList");
+
+    allToDoList.forEach((itemToDoList) => {
+        let textEditInput = itemToDoList.querySelector("p");
+
+        if (textEditInput.innerText === oldTextToDoList) {
+            textEditInput.innerText = newTextEditInput;
+        };
+    });
+};
+
 
 // eventos
 createForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const createInputValue = createInput.value;
 
-    createInputValue ? saveToDoList(createInputValue) : alert("Escreva alguma tarefa");
-});
-
-editForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const editInputValue = editInput.value;
-
-
+    createInputValue ? saveToDoList(createInputValue) : alert(`Escreva alguma tarefa`);
 });
 
 document.addEventListener("click", (event) => {
     const targetElement = event.target;
     const parentElement = targetElement.closest("div");
+    let textEditInput;
+
+    if (parentElement && parentElement.querySelector("p")) {
+        textEditInput = parentElement.querySelector("p").innerText;
+    };
 
     if (targetElement.classList.contains("finish-to-do-list")) {
         parentElement.classList.toggle("item-to-do-list-finish");
@@ -71,6 +83,9 @@ document.addEventListener("click", (event) => {
 
     if (targetElement.classList.contains("edit-to-do-list")) {
         toggleForms();
+
+        editInput.value = textEditInput;
+        oldTextToDoList = textEditInput;
     };
 
     if (targetElement.classList.contains("remove-to-do-list")) {
@@ -79,7 +94,17 @@ document.addEventListener("click", (event) => {
 });
 
 cancelButton.addEventListener("click", (event) => {
-    createForm.classList.toggle("hidden");
-    editForm.classList.toggle("hidden");
-    toDoList.classList.toggle("hidden");
+    event.preventDefault();
+    toggleForms();
+});
+
+editForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const editInputValue = editInput.value;
+
+    if (editInputValue) {
+        updateToDoList(editInputValue)
+    };
+
+    toggleForms();
 });
