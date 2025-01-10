@@ -48,7 +48,7 @@ const toggleForms = () => {
 };
 
 const updateToDoList = (newTextEditInput) => {
-    const allToDoList = toDoList.querySelectorAll(".itemToDoList");
+    const allToDoList = toDoList.querySelectorAll(".item-to-do-list");
 
     allToDoList.forEach((itemToDoList) => {
         let textEditInput = itemToDoList.querySelector("p");
