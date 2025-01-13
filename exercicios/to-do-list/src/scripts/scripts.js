@@ -41,11 +41,13 @@ const saveToDoList = (textCreateInput) => {
     createInput.focus();
 };
 
+
 const toggleForms = () => {
     createForm.classList.toggle("hidden");
     editForm.classList.toggle("hidden");
     toDoList.classList.toggle("hidden");
 };
+
 
 const updateToDoList = (newTextEditInput) => {
     const allToDoList = toDoList.querySelectorAll(".item-to-do-list");
@@ -67,6 +69,7 @@ createForm.addEventListener("submit", (event) => {
 
     createInputValue ? saveToDoList(createInputValue) : alert(`Escreva alguma tarefa`);
 });
+
 
 document.addEventListener("click", (event) => {
     const targetElement = event.target;
@@ -93,10 +96,12 @@ document.addEventListener("click", (event) => {
     };
 });
 
+
 cancelButton.addEventListener("click", (event) => {
     event.preventDefault();
     toggleForms();
 });
+
 
 editForm.addEventListener("submit", (event) => {
     event.preventDefault();
