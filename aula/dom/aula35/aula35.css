@@ -7,6 +7,7 @@
 html, body {
     width: 100vw;
     height: 100vh;
+    background-color: navy;
 }
 
 main {
@@ -20,7 +21,7 @@ main {
 .container {
     width: 15rem;
     height: 30rem;
-    background-color: rgb(240, 248, 255);
+    background-color: blue;
     padding: 5rem 2rem;
     display: flex;
     flex-direction: column;
@@ -37,6 +38,12 @@ main {
     border: 2px solid steelblue;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.select {
+    background-color: crimson !important;
+    color: aliceblue !important;
+    border-color: hotpink !important;
 }
 
 button {
