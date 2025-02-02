@@ -25,7 +25,6 @@ const containerResult = document.querySelector("#result-container");
 
 
 
-
 const createCourse = (courseInput) => {
     const div = document.createElement("div");
     div.classList.add("course");
@@ -64,7 +63,7 @@ buttonSelect.addEventListener("click", () => {
 
     checkboxs.map((checkbox) => {
         if(!selectCourses.includes(checkbox.parentNode)) {
-            checkbox.parentNode.remove();
+            checkbox.parentNode.classList.toggle("hidden");
         };
     });
 });

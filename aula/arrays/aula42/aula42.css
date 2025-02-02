@@ -76,3 +76,7 @@ main {
 input[type="checkbox"] {
     cursor: pointer;
 }
+
+.hidden {
+    display: none;
+}
