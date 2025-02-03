@@ -53,12 +53,12 @@ const check = (action) => {
     checkboxs.map((checkbox) => {
         const course = checkbox.parentNode;
 
-        if (action === "select" && !coursesSelect.includes(course)) {
-            course.classList.toggle("hidden");
-        };
-
         if (action === "remove" && coursesSelect.includes(course)) {
             course.remove();
+        };
+
+        if (action === "select" && !coursesSelect.includes(course)) {
+            course.classList.toggle("hidden");
         };
     });
 };
