@@ -43,6 +43,26 @@ const createCourse = (courseInput) => {
     formInput.value = "";
 };
 
+const check = (action) => {
+    const checkboxs = [...document.querySelectorAll("input[type=checkbox]")];
+
+    const selectCheckbos = checkboxs.filter(checkbox => checkbox.checked);
+
+    const coursesSelect = selectCheckbos.map(selectCheckbox => selectCheckbox.parentNode);
+
+    checkboxs.map((checkbox) => {
+        const course = checkbox.parentNode;
+
+        if (action === "select" && !coursesSelect.includes(course)) {
+            course.classList.toggle("hidden");
+        };
+
+        if (action === "remove" && coursesSelect.includes(course)) {
+            course.remove();
+        };
+    });
+};
+
 
 
 form.addEventListener("submit", (event) => {
@@ -54,30 +74,10 @@ form.addEventListener("submit", (event) => {
     };
 });
 
-buttonSelect.addEventListener("click", () => {
-    const checkboxs = [...document.querySelectorAll("input[type=checkbox]")];
-
-    const selectCheckboxs = checkboxs.filter(checkbox => checkbox.checked);
-
-    const selectCourses = selectCheckboxs.map(checkbox => checkbox.parentNode);
-
-    checkboxs.map((checkbox) => {
-        if(!selectCourses.includes(checkbox.parentNode)) {
-            checkbox.parentNode.classList.toggle("hidden");
-        };
-    });
+buttonRemove.addEventListener("click", () => {
+    check("remove");
 });
 
-buttonRemove.addEventListener("click", () => {
-    const checkboxs = [...document.querySelectorAll("input[type=checkbox]")];
-
-    const selectCheckboxs = checkboxs.filter(checkbox => checkbox.checked);
-
-    const selectCourses = selectCheckboxs.map(checkbox => checkbox.parentNode);
-
-    checkboxs.map((checkbox) => {
-        if(selectCourses.includes(checkbox.parentNode)) {
-            checkbox.parentNode.remove();
-        };
-    });
+buttonSelect.addEventListener("click", () => {
+    check("select");
 });
