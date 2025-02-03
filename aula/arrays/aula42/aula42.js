@@ -27,7 +27,6 @@ const buttonRemove = document.querySelector("#remove-course");
 const buttonSelect = document.querySelector("#select-course");
 
 const containerResult = document.querySelector("#result-container");
-const checkboxs = [...document.querySelectorAll("input[type=checkbox]")];
 
 
 // FUNÇÕES //
@@ -65,6 +64,8 @@ const createCourse = (courseInput, action, courseSibling) => {
 
 
 const beforeAndAfter = () => {
+    const checkboxs = [...document.querySelectorAll("input[type=checkbox]")];
+
     const checkboxSelect = checkboxs.filter(checkbox => checkbox.checked);
 
     const courseSelect = checkboxSelect[0].parentNode;
@@ -75,6 +76,8 @@ const beforeAndAfter = () => {
 
 
 const check = (action) => {
+    const checkboxs = [...document.querySelectorAll("input[type=checkbox]")];
+
     const selectCheckbos = checkboxs.filter(checkbox => checkbox.checked);
 
     const coursesSelect = selectCheckbos.map(selectCheckbox => selectCheckbox.parentNode);
@@ -125,12 +128,10 @@ buttonAdd.addEventListener("click", (event) => {
     };
 });
 
-buttonRemove.addEventListener("click", (event) => {
-    event.preventDefault();
+buttonRemove.addEventListener("click", () => {
     check("remove");
 });
 
-buttonSelect.addEventListener("click", (event) => {
-    event.preventDefault();
+buttonSelect.addEventListener("click", () => {
     check("select");
 });
