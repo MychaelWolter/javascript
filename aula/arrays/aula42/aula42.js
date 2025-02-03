@@ -128,10 +128,12 @@ buttonAdd.addEventListener("click", (event) => {
     };
 });
 
-buttonRemove.addEventListener("click", () => {
+buttonRemove.addEventListener("click", (event) => {
+    event.preventDefault();
     check("remove");
 });
 
-buttonSelect.addEventListener("click", () => {
+buttonSelect.addEventListener("click", (event) => {
+    event.preventDefault();
     check("select");
 });
