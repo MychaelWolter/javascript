@@ -33,6 +33,7 @@ main {
 #container-array {
     background-color: rgb(255, 148, 129);
     border: 2px solid rgb(247, 61, 28);
+    height: 100px;
 }
 
 #container-search {
@@ -43,6 +44,7 @@ main {
 #container-result {
     background-color: rgb(198, 198, 255);
     border: 2px solid rgb(28, 28, 255);
+    height: 100px;
 }
 
 #input-search {
