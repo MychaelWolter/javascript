@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 53 js</title>
+    <link rel="stylesheet" href="aula53.css">
+</head>
+<body>
+
+    <form id="form-container">
+
+        <div class="container-values">
+            <label id="label-first-value" for="first-value">Valor 1</label>
+
+            <input type="number" id="first-input" required autocomplete="off" maxlength="5" placeholder="0">
+        </div>
+
+        <div class="container-values">
+            <label id="label-secund-value" for="secund-value">Valor 2</label>
+
+            <input type="number" id="secund-input" required autocomplete="off" maxlength="5" placeholder="0">
+        </div>
+
+        <div id="container-result">
+            <p id="label-result">Resultado</p>
+
+            <p id="result"></p>
+        </div>
+
+        <div id="container-operator">
+            <button type="submit" class="operator" id="plus">+</button>
+            <button type="submit" class="operator" id="subtraction">-</button>
+            <button type="submit" class="operator" id="multiplication">*</button>
+            <button type="submit" class="operator" id="division">/</button>
+        </div>
+
+    </form>
+
+    <script src="aula53.js"></script>
+</body>
+</html>
