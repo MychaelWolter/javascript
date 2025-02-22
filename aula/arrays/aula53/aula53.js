@@ -39,25 +39,3 @@ const operationsMenu = [
 console.log(`${operationsMenu[0](values)} \n`);
 console.log(`${operationsMenu[1](values)} \n`);
 console.log(`${operationsMenu[2](values)} \n`);
-
-
-// EXERCICIO
-
-
-const form = document.querySelector("#form-container");
-const firstInput = document.querySelector("#first-input");
-const secundInput = document.querySelector("#secund-input");
-const result = document.querySelector("#result");
-
-const button = {
-    plus : document.querySelector("#plus"),
-    subtraction : document.querySelector("#subtraction"),
-    multiplication : document.querySelector("#multiplication"),
-    division : document.querySelector("#division")
-};
-
-const {plus, subtraction, multiplication, division} = button;
-
-form.addEventListener("submit", (event) => {
-
-});
